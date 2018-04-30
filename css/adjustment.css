@@ -1,0 +1,99 @@
+body, html{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  font: 1rem Arial;
+  font-size: 16px;
+  line-height: 1;
+  background-color: #f9f9f9;
+  -webkit-font-smoothing: antialiased;
+  width: auto;
+  margin: 0;
+  overflow: hidden;
+}
+
+li{
+  list-style: none;
+  padding: none;
+  margin: none;
+  display: inline-block;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer{
+  background: #2c2c2c;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  color: #9c9c9c;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+  vertical-align: middle;
+  font-size: 15px;
+  font-weight: bold;
+  overflow: hidden;
+  text-align: center;
+
+  top: 92%;
+  /* top: 0%; */
+  }
+
+.main-content{
+  height: 86%;
+  overflow: scroll;
+  width: 100%;
+
+}
+
+.main-content::after{
+  content: "";
+  display: block;
+  height: 0px;
+}
+
+footer div{
+  display: inline-block;
+  height: 20px;
+  margin: -3px 100px;
+}
+
+h4{
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+footer h4:hover{
+  color: #c1c1c1;
+  cursor: pointer;
+}
+
+.toolbox{
+  width: 100%;
+  padding: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  /* height: 30px; */
+  height: 5%;
+  background: #f8f8f8;
+  overflow: hidden;
+}
+
+.toolbox-header{
+  margin-top: -25px;
+  margin-left: 10px;
+  width: 300px;
+}
+
+.toolbox-header{
+  color: #2c2c2c;
+}
+
+.header{
+  text-align: center;
+}
