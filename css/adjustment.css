@@ -40,6 +40,7 @@ footer{
   font-weight: bold;
   overflow: hidden;
   text-align: center;
+  border-top: 3px solid #3c3c3c;
 
   top: 92%;
   /* top: 0%; */
@@ -61,12 +62,16 @@ footer{
 footer div{
   display: inline-block;
   height: 20px;
-  margin: -3px 100px;
+  margin: -5px 100px;
 }
 
 h4{
   font-size: 16px;
   transition: color 0.3s;
+}
+
+footer h4{
+  display: block;
 }
 
 footer h4:hover{
@@ -93,6 +98,8 @@ footer h4:hover{
 .toolbox-header{
   color: #2c2c2c;
 }
+
+
 
 .header{
   text-align: center;

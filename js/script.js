@@ -13,6 +13,8 @@ $( document ).ready(function functionName() {
   var
     toolBox = $('.toolbox');
     toolBoxHeader = $('.toolbox-header h1');
+    ldot = $('.dot-left');
+    rdot = $('.dot-right');
 
   var blackToolBox = function() {
     toolBox.animate({backgroundColor : '#2c2c2c'}, 500);
@@ -35,6 +37,7 @@ $( document ).ready(function functionName() {
       hideFooter();
       WhiteToolBox();
       $(this).removeClass('active tab');
+      ldot.removeClass('active-dot');
       $(this).attr('title','');
       $(this).parent().siblings().children('.active').attr('title','');
       $(this).parent().siblings().children('.active').removeClass('active tab');
@@ -44,6 +47,8 @@ $( document ).ready(function functionName() {
       // showAbout();
       // hideContacts();
       $(this).addClass('active tab');
+      ldot.addClass('active-dot');
+      rdot.removeClass('active-dot');
       $(this).attr('title','Tap to close this')
       $(this).parent().siblings().children('.active').attr('title','');
       $(this).parent().siblings().children('.active').removeClass('active tab');
@@ -55,6 +60,7 @@ $( document ).ready(function functionName() {
       hideFooter();
       WhiteToolBox();
       $(this).removeClass('active tab');
+      rdot.removeClass('active-dot');
       $(this).attr('title','');
       $(this).parent().siblings().children('.active').attr('title','');
       $(this).parent().siblings().children('.active').removeClass('active tab');
@@ -64,6 +70,8 @@ $( document ).ready(function functionName() {
       // showContacts();
       // hideAbout();
       $(this).addClass('active tab');
+      rdot.addClass('active-dot');
+      ldot.removeClass('active-dot');
       $(this).attr('title','Tap to close this');
       $(this).parent().siblings().children('.active').attr('title','');
       $(this).parent().siblings().children('.active').removeClass('active tab');
