@@ -11,6 +11,23 @@ $( document ).ready(function functionName() {
   };
 
   var
+    contactsContent = $('.contacts-content');
+    aboutContent = $('.about-content');
+  var showAbout = function() {
+    aboutContent.animate({right : '0%'}, 500);
+  }
+  var hideAbout = function() {
+    aboutContent.animate({right : '100%'}, 500);
+  }
+  var showContacts = function() {
+    contactsContent.animate({left : '0%'}, 500);
+  }
+  var hideContacts = function() {
+    contactsContent.animate({left : '100%'}, 500);
+  }
+
+
+  var
     toolBox = $('.toolbox');
     toolBoxHeader = $('.toolbox-header h1');
     ldot = $('.dot-left');
@@ -38,17 +55,23 @@ $( document ).ready(function functionName() {
       WhiteToolBox();
       $(this).removeClass('active tab');
       ldot.removeClass('active-dot');
+      ldot.fadeOut(500);
+      rdot.fadeOut(500);
       $(this).attr('title','');
       $(this).parent().siblings().children('.active').attr('title','');
       $(this).parent().siblings().children('.active').removeClass('active tab');
     } else {
       showFooter();
       blackToolBox();
-      // showAbout();
-      // hideContacts();
+      hideContacts();
+      showAbout();
       $(this).addClass('active tab');
       ldot.addClass('active-dot');
+      ldot.fadeIn(500);
+      rdot.fadeIn(500);
+
       rdot.removeClass('active-dot');
+
       $(this).attr('title','Tap to close this')
       $(this).parent().siblings().children('.active').attr('title','');
       $(this).parent().siblings().children('.active').removeClass('active tab');
@@ -61,21 +84,67 @@ $( document ).ready(function functionName() {
       WhiteToolBox();
       $(this).removeClass('active tab');
       rdot.removeClass('active-dot');
+      ldot.fadeOut(500);
+      rdot.fadeOut(500);
       $(this).attr('title','');
       $(this).parent().siblings().children('.active').attr('title','');
       $(this).parent().siblings().children('.active').removeClass('active tab');
     } else {
       showFooter();
       blackToolBox();
-      // showContacts();
-      // hideAbout();
+      hideAbout();
+      showContacts();
       $(this).addClass('active tab');
       rdot.addClass('active-dot');
+      ldot.fadeIn(500);
+      rdot.fadeIn(500);
       ldot.removeClass('active-dot');
       $(this).attr('title','Tap to close this');
       $(this).parent().siblings().children('.active').attr('title','');
       $(this).parent().siblings().children('.active').removeClass('active tab');
     }
   });
+
+  var
+    socialsBlock = $('.contacts__socials-block');
+    socialsCurtain = $('.contacts__socials-curtain');
+
+  socialsBlock.hover(function() {
+    $(this).find(socialsCurtain).stop().animate({bottom : '25%'},300);
+    $(this).css({cursor : 'pointer'});
+
+  }, function() {
+    $(this).find(socialsCurtain).stop().animate({bottom : '0%'},250);
+  });
+
+  var
+  // Social links
+    g = 'https://plus.google.com/discover';
+    f = 'https://facebook.com';
+    t = 'https://twitter.com';
+    y = 'https://www.youtube.com/channel/UCEgdi0XIXXZ-qJOFPf4JSKw';
+    // i = 'https://www.instagram.com';
+
+  var socialsLink = function(link) {
+    window.open(link);
+  };
+
+  $('.social-1').click(function() {
+    socialsLink(g);
+  })
+
+  $('.social-2').click(function() {
+    socialsLink(f);
+  })
+
+  $('.social-3').click(function() {
+    socialsLink(t);
+  })
+
+  $('.social-4').click(function() {
+    socialsLink(y);
+  })
+
+
 
 })

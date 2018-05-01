@@ -41,10 +41,13 @@ footer{
   overflow: hidden;
   text-align: center;
   border-top: 3px solid #3c3c3c;
-
   top: 92%;
   /* top: 0%; */
   }
+
+.footer-content{
+  position: relative;
+}
 
 .main-content{
   height: 86%;
@@ -62,7 +65,7 @@ footer{
 footer div{
   display: inline-block;
   height: 20px;
-  margin: -5px 100px;
+  margin: -3px 100px;
 }
 
 h4{
