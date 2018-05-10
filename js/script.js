@@ -52,6 +52,7 @@ $( document ).ready(function functionName() {
   $('.footer__about h4').click(function() {
     if ($(this).hasClass('active tab')) {
       hideFooter();
+      aboutContent.fadeOut(500);
       WhiteToolBox();
       $(this).removeClass('active tab');
       ldot.removeClass('active-dot');
@@ -64,14 +65,13 @@ $( document ).ready(function functionName() {
       showFooter();
       blackToolBox();
       hideContacts();
+      aboutContent.fadeIn(100);
       showAbout();
       $(this).addClass('active tab');
       ldot.addClass('active-dot');
       ldot.fadeIn(500);
       rdot.fadeIn(500);
-
       rdot.removeClass('active-dot');
-
       $(this).attr('title','Tap to close this')
       $(this).parent().siblings().children('.active').attr('title','');
       $(this).parent().siblings().children('.active').removeClass('active tab');
@@ -81,6 +81,7 @@ $( document ).ready(function functionName() {
   $('.footer__contacts h4').click(function() {
     if ($(this).hasClass('active tab')) {
       hideFooter();
+      contactsContent.fadeOut(500);
       WhiteToolBox();
       $(this).removeClass('active tab');
       rdot.removeClass('active-dot');
@@ -93,6 +94,7 @@ $( document ).ready(function functionName() {
       showFooter();
       blackToolBox();
       hideAbout();
+      contactsContent.fadeIn(100);
       showContacts();
       $(this).addClass('active tab');
       rdot.addClass('active-dot');
@@ -144,7 +146,5 @@ $( document ).ready(function functionName() {
   $('.social-4').click(function() {
     socialsLink(y);
   })
-
-
 
 })
