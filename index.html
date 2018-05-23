@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="/css/adjustment.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/fa/css/fontawesome-all.css">
   <title>Blog</title>
 </head>
 <body>
@@ -28,67 +29,82 @@
   </div>
   <footer class="footer">
     <div class="footer-content">
-      <div class="footer__about">
-        <h4>About</h4>
-        <div class="dot-left"></div>
-      </div>
-      <div class="footer__copyright">
-        <p> Copyright &copy; 2018 Copyright Holder All Rights Reserved. </p>
-      </div>
-      <div class="footer__contacts">
-        <h4>Contacts</h4>
-        <div class="dot-right"></div>
-      </div>
-      <div class="about-content">
-        <div class="about__header-photo">
-          <div class="about__header"><h2>About me</h2></div>
-          <div class="about__photo">
-            <img src="/img/footer/about.jpg" alt="Photo">
-          </div>
+      <div class="footer-content-block" id="footercontent">
+        <div class="footer__about">
+          <h4>About</h4>
+          <div class="dot-left"></div>
         </div>
-        <div class="about__text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod libero quasi hic, sed ducimus cumque, expedita commodi, aliquam amet earum pariatur optio officia excepturi porro odit illum distinctio sequi aperiam explicabo rerum dicta laborum molestiae laudantium. Tempore, atque ab alias saepe officia aperiam natus illum ullam quia magni at totam.</p>
+        <div class="footer__copyright">
+          <p> Copyright &copy; 2018 Copyright Holder All Rights Reserved. </p>
         </div>
-      </div>
-      <div class="contacts-content">
-        <div class="contacts__header">
-          <h2>Contacts</h2>
+        <div class="footer__contacts">
+          <h4>Contacts</h4>
+          <div class="dot-right"></div>
         </div>
-        <div class="contacts__socials-cover">
-          <div class="contacts__socials-col col-1">
-            <div class="contacts__socials-block social-1">
-              <img src="/img/footer/googleplus_icon.png" alt="Google+ social" height="125" width="125">
-              <div class="contacts__socials-curtain">
-                <h3>Google+</h3>
-              </div>
-            </div>
-            <div class="contacts__socials-block social-2">
-              <img src="/img/footer/facebook_icon.png" alt="Facebook social" height="125" width="125">
-              <div class="contacts__socials-curtain">
-                <h3>Facebook</h3>
-              </div>
+        <div class="about-content">
+          <div class="about__header-photo">
+            <div class="about__header"><h2>About me</h2></div>
+            <div class="about__photo">
+              <img src="/img/footer/about.jpg" alt="Photo">
             </div>
           </div>
-          <div class="contacts__socials-col col-2">
-            <div class="contacts__socials-block social-3">
-              <img src="/img/footer/twitter_icon.png" alt="Twitter social" height="125" width="125">
-              <div class="contacts__socials-curtain">
-                <h3>Twitter</h3>
-              </div>
-            </div>
-            <div class="contacts__socials-block social-4">
-              <img src="/img/footer/youtube_icon.png" alt="Youtube" height="125" width="125">
-              <div class="contacts__socials-curtain">
-                <h3>Youtube</h3>
-              </div>
-            </div>
+          <div class="about__text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod libero quasi hic, sed ducimus cumque, expedita commodi, aliquam amet earum pariatur optio officia excepturi porro odit illum distinctio sequi aperiam explicabo rerum dicta laborum molestiae laudantium. Tempore, atque ab alias saepe officia aperiam natus illum ullam quia magni at totam.</p>
           </div>
+        </div>
+        <div class="contacts-content">
+          <div class="contacts__header">
+            <h2>Contacts</h2>
+          </div>
+          <div class="contacts__socials-cover">
+            <div class="contacts__socials-col col-1">
+              <div class="contacts__socials-block social-1">
+                <img src="/img/footer/googleplus_icon.png" alt="Google+ social" height="125" width="125">
+                <div class="contacts__socials-curtain">
+                  <h3>Google+</h3>
+                </div>
+              </div>
+              <div class="contacts__socials-block social-2">
+                <img src="/img/footer/facebook_icon.png" alt="Facebook social" height="125" width="125">
+                <div class="contacts__socials-curtain">
+                  <h3>Facebook</h3>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__socials-col col-2">
+              <div class="contacts__socials-block social-3">
+                <img src="/img/footer/twitter_icon.png" alt="Twitter social" height="125" width="125">
+                <div class="contacts__socials-curtain">
+                  <h3>Twitter</h3>
+                </div>
+              </div>
+              <div class="contacts__socials-block social-4">
+                <img src="/img/footer/youtube_icon.png" alt="Youtube" height="125" width="125">
+                <div class="contacts__socials-curtain">
+                  <h3>Youtube</h3>
+                </div>
+              </div>
+            </div>
 
+          </div>
+          <div class="contacts__feedback-cover" unselectable="on">
+            <p>Also you can send a feedback.</p>
+            <div class="contacts__feedback-button footer-button" id="feedbackButtonOpen"><p>Send feedback</p></div>
+          </div>
         </div>
-        <div class="contacts__feedback-cover" unselectable="on">
-        <p>Also you can send a feedback.</p>
-        <div class="contacts__feedback-button footer-button"><p>Send feedback</p></div>
+      </div>
+      <div class="feedbackform-block" id="feedback">
+        <div class="feedbackform-cover" id="feedback">
+          <div class="close_button">
+            <i class="fas fa-times"></i>
+          </div>
+          <h3 class="feedbackform-header">Feedback</h3>
+          <div class="feedbackform-buttons">
+
+          </div>
         </div>
+      </div>
+      <div class="footer-tr-cover" id="footerTrCover">
       </div>
     </div>
   </footer>

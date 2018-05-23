@@ -47,8 +47,6 @@ $( document ).ready(function functionName() {
     footer.css({boxShadow: '0 0 3px rgba(0, 0, 0, 0.5)'});
   };
 
-
-
   $('.footer__about h4').click(function() {
     if ($(this).hasClass('active tab')) {
       hideFooter();
@@ -146,5 +144,88 @@ $( document ).ready(function functionName() {
   $('.social-4').click(function() {
     socialsLink(y);
   })
+
+
+
+  var
+    feedbackForm = $('.feedbackform-cover');
+    feedbackButtonOpen = $('.contacts__feedback-button');
+    feedbackButtonClose = $('.close_button');
+    footerAndToolbox = $('.footer-content-block');
+    feedbackIsShow = false;
+    footerTrCover = $('.footer-tr-cover');
+
+  var feedbackShow = function() {
+    var duration = 500;
+    feedbackForm.animate({top:'350%', opacity: '1'},500);
+    fatBlurIn()
+    footerTrCover.css({display: 'block'});
+    setTimeout(function () {
+      feedbackIsShow = true;
+    }, 1);
+
+  };
+
+  var feedbackHide = function() {
+    var duration = 100;
+    feedbackForm.animate({top:'3000%', opacity: '0'},500);
+    fatBlurOut()
+    footerTrCover.css({display: 'none'});
+    setTimeout(function () {
+      feedbackIsShow = false;
+    }, 1);
+  };
+
+  var fatBlurIn = function() {
+    blurElement(footerAndToolbox, 10)
+  }
+  var fatBlurOut = function() {
+    blurElementFast(footerAndToolbox, 0)
+  }
+
+  feedbackButtonOpen.click(feedbackShow);
+  feedbackButtonClose.click(feedbackHide);
+
+
+  // blurElement
+
+  function blurElement(element, size){
+  var filterVal = 'blur('+size+'px)';
+  $(element).css({
+        'filter':filterVal,
+        'webkitFilter':filterVal,
+        'mozFilter':filterVal,
+        'oFilter':filterVal,
+        'msFilter':filterVal,
+        'transition':'all 0.25s ease-out',
+        '-webkit-transition':'all 0.25s ease-out',
+        '-moz-transition':'all 0.25s ease-out',
+        '-o-transition':'all 0.25s ease-out'
+    });
+  }
+  function blurElementFast(element, size){
+  var filterVal = 'blur('+size+'px)';
+  $(element).css({
+        'filter':filterVal,
+        'webkitFilter':filterVal,
+        'mozFilter':filterVal,
+        'oFilter':filterVal,
+        'msFilter':filterVal,
+        'transition':'all 0.1s ease-out',
+        '-webkit-transition':'all 0.1s ease-out',
+        '-moz-transition':'all 0.1s ease-out',
+        '-o-transition':'all 0.1s ease-out'
+    });
+  }
+
+  $('body').click(function(evt) {
+    if (feedbackIsShow) {
+      if (evt.target.id == 'footerTrCover') {
+          feedbackHide();
+      } else {
+          return;
+      }
+  }})
+
 
 })
