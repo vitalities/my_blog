@@ -227,5 +227,16 @@ $( document ).ready(function functionName() {
       }
   }})
 
-
 })
+
+// var feedbackTextArea = $('#feedbackformTextArea');
+//   textAreaValue = feedbackformTextArea.value;
+//   textAreaLength = textAreaValue.length;
+//
+// var checkTextAreaLength = function() {
+//   if (textAreaLength == 350) {
+//     $('.warn').fadeIn();
+//   } else {
+//     $('.warn').fadeOut();
+//   }
+// };

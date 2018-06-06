@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Hind">
+  <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" href="/css/adjustment.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/fa/css/fontawesome-all.css">
@@ -16,8 +20,8 @@
     </div>
   </div>
   <div class="main-content">
-    <div class="header">
-      <h1>Header</h1>
+    <div id="jumbotron">
+        <h1>My blog</h1>
     </div>
     <div class="page-content">
       <div class="welcome-block block">
@@ -94,14 +98,33 @@
         </div>
       </div>
       <div class="feedbackform-block" id="feedback">
-        <div class="feedbackform-cover" id="feedback">
+        <div class="feedbackform-cover">
           <div class="close_button">
             <i class="fas fa-times"></i>
           </div>
           <h3 class="feedbackform-header">Feedback</h3>
-          <div class="feedbackform-buttons">
-
-          </div>
+          <form class="feedbackForm">
+            <div class="feedbackform-main">
+              <div class="feedbackform-title">
+                <p>Name</p>
+                <p>Email</p>
+                <p>Title</p>
+              </div>
+              <div class="feedbackform-input">
+                <input type="text" name="username" value="" maxlength="26" required placeholder="Input your name" >
+                <input type="email" name="useremail" value="" required  placeholder="Input your email">
+                <input type="text" name="usertitle" value=""  placeholder="Input your title">
+              </div>
+              <div class="feedbackform-textarea">
+                <p>Message</p>
+                <textarea id="feedbackformTextArea" name="message" rows="8" cols="30" placeholder="Input your message here" maxlength="350" onfocus="checkTextAreaLength()" required ></textarea>
+              </div>
+            </div>
+            <div class="feedbackform-buttons">
+              <button class="feedbackform-button" type="submit" name="send">Send</button>
+              <button class="feedbackform-button" type="reset" name="reset">Reset</button>
+            </div>
+          </form>
         </div>
       </div>
       <div class="footer-tr-cover" id="footerTrCover">

@@ -4,7 +4,7 @@ body, html{
 }
 
 body{
-  font: 1rem Arial;
+  font: 1rem Hind, Arial, Tahoma;
   font-size: 16px;
   line-height: 1;
   background-color: #f9f9f9;
@@ -12,6 +12,8 @@ body{
   width: auto;
   margin: 0;
   overflow: hidden;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Hind', sans-serif;
 
 }
 
@@ -103,6 +105,7 @@ footer h4:hover{
   user-select: none; /* Standard */
   position: relative;
   top: 20%;
+  font: 1rem Tahoma;
 }
 
 .toolbox-header{
@@ -111,6 +114,6 @@ footer h4:hover{
 
 
 
-.header{
+#jumbotron{
   text-align: center;
 }
